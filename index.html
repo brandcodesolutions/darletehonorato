@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Receitas Que Encantam — Darlete Honorato</title>
+  <meta name="description" content="Combo exclusivo com dois e-books de receitas: Bolos Caseiros e Receitas Salgadas. Acesso imediato por apenas R$ 41,86." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --branco: #FAFAFA;
+      --cafe: #5A3825;
+      --vinho: #A52A2A;
+      --vinho-escuro: #6B1A1A;
+      --bege: #F4E8D8;
+      --bege-medio: #E8D5BA;
+      --preto: #1A1A1A;
+      --cinza: #6B6B6B;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Outfit', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--branco);
+      color: var(--preto);
+      overflow-x: hidden;
+    }
+
+    /* ─── UTILITÁRIOS ─── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container-wide { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border-radius: 100px;
+    }
+    .tag--fire {
+      background: linear-gradient(135deg, #A52A2A22, #A52A2A44);
+      color: var(--vinho);
+      border: 1px solid #A52A2A44;
+    }
+    .tag--light {
+      background: rgba(255,255,255,0.15);
+      color: var(--branco);
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    /* ─── BOOK PLACEHOLDER ─── */
+    .book-placeholder {
+      width: 100%;
+      aspect-ratio: 3/4;
+      border-radius: 8px;
+      background: linear-gradient(145deg, #e8d5ba, #c9a882);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-family: var(--sans);
+      color: var(--cafe);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      border: 2px dashed #c9a882;
+    }
+    .book-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(90,56,37,0.04) 10px,
+        rgba(90,56,37,0.04) 20px
+      );
+    }
+    .book-placeholder-icon {
+      font-size: 36px;
+      position: relative;
+    }
+    .book-placeholder-text {
+      position: relative;
+      line-height: 1.5;
+    }
+    .book-placeholder-label {
+      position: relative;
+      font-size: 11px;
+      opacity: 0.6;
+    }
+
+    /* ─── HERO LOGO ─── */
+    .hero__logo-link {
+      position: absolute;
+      top: 68px;
+      left: calc((100% - 1200px) / 2 + 24px + 75px);
+      z-index: 10;
+      text-decoration: none;
+    }
+    .hero__logo-img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+    @media (max-width: 1248px) {
+      .hero__logo-link { left: calc(24px + 75px); }
+    }
+    @media (max-width: 768px) {
+      .hero__logo-link { left: 50%; transform: translateX(-50%); top: 28px; }
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1A0A05 0%, #2D1408 40%, #3D1A0A 70%, #1A0A05 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 60% at 70% 50%, rgba(165,42,42,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(90,56,37,0.2) 0%, transparent 60%);
+    }
+    .hero__grain {
+      position: absolute;
+      inset: 0;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    }
+    .hero__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      padding: 120px 0 100px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero__content { display: flex; flex-direction: column; gap: 28px; }
+    .hero__eyebrow { display: flex; align-items: center; gap: 12px; }
+    .hero__divider {
+      width: 40px;
+      height: 1px;
+      background: rgba(165,42,42,0.6);
+    }
+    .hero__eyebrow-text {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(244,232,216,0.6);
+    }
+    .hero__title {
+      font-family: var(--serif);
+      font-size: clamp(38px, 4.5vw, 62px);
+      font-weight: 700;
+      line-height: 1.12;
+      color: var(--branco);
+      letter-spacing: -0.01em;
+    }
+    .hero__title em {
+      font-style: italic;
+      color: #D4956A;
+    }
+    .hero__subtitle {
+      font-size: 17px;
+      line-height: 1.7;
+      color: rgba(244,232,216,0.75);
+      font-weight: 300;
+      max-width: 480px;
+    }
+    .hero__price-block {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .hero__price-from {
+      font-size: 14px;
+      color: rgba(244,232,216,0.5);
+      text-decoration: line-through;
+      letter-spacing: 0.02em;
+    }
+    .hero__price-label {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(244,232,216,0.6);
+    }
+    .hero__price-value {
+      font-family: var(--serif);
+      font-size: clamp(48px, 6vw, 72px);
+      font-weight: 800;
+      color: var(--branco);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .hero__price-value span {
+      font-size: 0.5em;
+      font-weight: 400;
+      vertical-align: top;
+      margin-top: 12px;
+      display: inline-block;
+    }
+    .hero__actions { display: flex; flex-direction: column; gap: 16px; }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--vinho), #8B1A1A);
+      color: var(--branco);
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 20px 40px;
+      border-radius: 100px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+      max-width: fit-content;
+    }
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 50px rgba(165,42,42,0.45);
+    }
+    .btn-primary:hover::before { opacity: 1; }
+    .hero__trust {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: rgba(244,232,216,0.45);
+    }
+    .hero__trust-icon { font-size: 16px; }
+
+    /* ─── HERO BOOKS ─── */
+    .hero__books {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 520px;
+    }
+    .hero__book {
+      position: absolute;
+      width: 260px;
+      filter: drop-shadow(0 40px 80px rgba(0,0,0,0.5));
+      transition: transform 0.4s ease;
+    }
+    .hero__book--1 {
+      transform: perspective(1000px) rotateY(-8deg) rotateX(3deg) translateX(-80px) translateY(-20px);
+      z-index: 2;
+    }
+    .hero__book--2 {
+      transform: perspective(1000px) rotateY(6deg) rotateX(-2deg) translateX(80px) translateY(30px);
+      z-index: 1;
+    }
+    .hero__books:hover .hero__book--1 {
+      transform: perspective(1000px) rotateY(-12deg) rotateX(5deg) translateX(-90px) translateY(-30px) scale(1.03);
+    }
+    .hero__books:hover .hero__book--2 {
+      transform: perspective(1000px) rotateY(10deg) rotateX(-4deg) translateX(90px) translateY(25px) scale(1.02);
+    }
+    .hero__book .book-placeholder {
+      border-radius: 6px;
+      box-shadow:
+        inset -4px 0 10px rgba(0,0,0,0.2),
+        0 0 0 1px rgba(255,255,255,0.1);
+    }
+    .hero__badge {
+      position: absolute;
+      top: 20px;
+      right: 0;
+      background: linear-gradient(135deg, var(--vinho), #8B1A1A);
+      color: var(--branco);
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      border-radius: 100px;
+      box-shadow: 0 8px 25px rgba(165,42,42,0.4);
+      z-index: 3;
+    }
+
+    /* ─── SOCIAL PROOF STRIP ─── */
+    .proof-strip {
+      background: var(--bege);
+      padding: 28px 0;
+      border-bottom: 1px solid var(--bege-medio);
+    }
+    .proof-strip__inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .proof-item__icon { font-size: 20px; }
+    .proof-item__text {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--cafe);
+      letter-spacing: 0.02em;
+    }
+    .proof-sep {
+      width: 1px;
+      height: 28px;
+      background: var(--bege-medio);
+    }
+
+    /* ─── EBOOKS SECTION ─── */
+    .ebooks { padding: 120px 0; background: var(--branco); }
+    .section-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .section-eyebrow__line {
+      width: 40px;
+      height: 1px;
+      background: var(--vinho);
+    }
+    .section-eyebrow__text {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--vinho);
+    }
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(36px, 4vw, 54px);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--preto);
+      letter-spacing: -0.01em;
+    }
+    .section-title em {
+      font-style: italic;
+      color: var(--cafe);
+    }
+    .section-sub {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--cinza);
+      font-weight: 300;
+      max-width: 540px;
+    }
+
+    .ebook-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      margin-bottom: 120px;
+    }
+    .ebook-block:last-child { margin-bottom: 0; }
+    .ebook-block--reverse .ebook-block__visual { order: 2; }
+    .ebook-block--reverse .ebook-block__content { order: 1; }
+
+    .ebook-block__visual {
+      position: relative;
+    }
+    .ebook-block__book-wrap {
+      position: relative;
+      max-width: 380px;
+      margin: 0 auto;
+    }
+    .ebook-block__book-wrap::before {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      left: 10%;
+      right: 10%;
+      height: 60px;
+      background: radial-gradient(ellipse, rgba(90,56,37,0.2) 0%, transparent 70%);
+      filter: blur(15px);
+    }
+    .ebook-block__book-img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: none;
+      position: relative;
+      transform: perspective(800px) rotateY(-5deg);
+      transition: transform 0.5s ease;
+    }
+    .ebook-block--reverse .ebook-block__book-img {
+      transform: perspective(800px) rotateY(5deg);
+    }
+    .ebook-block__book-wrap:hover .ebook-block__book-img {
+      transform: perspective(800px) rotateY(0deg) scale(1.02);
+    }
+    .ebook-block__price-tag {
+      position: absolute;
+      bottom: -15px;
+      right: -15px;
+      background: var(--cafe);
+      color: var(--branco);
+      padding: 16px 22px;
+      border-radius: 12px;
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 700;
+      box-shadow: 0 10px 30px rgba(90,56,37,0.3);
+    }
+    .ebook-block__price-tag small {
+      display: block;
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: 2px;
+    }
+
+    .ebook-block__content { display: flex; flex-direction: column; gap: 24px; }
+    .ebook-block__number {
+      font-family: var(--serif);
+      font-size: 80px;
+      font-weight: 800;
+      color: var(--bege-medio);
+      line-height: 1;
+      margin-bottom: -20px;
+    }
+    .ebook-block__title {
+      font-family: var(--serif);
+      font-size: clamp(28px, 3vw, 40px);
+      font-weight: 700;
+      color: var(--preto);
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+    .ebook-block__desc {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--cinza);
+      font-weight: 300;
+    }
+    .ebook-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .ebook-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      color: var(--preto);
+      font-weight: 400;
+    }
+    .ebook-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--vinho);
+      flex-shrink: 0;
+    }
+
+    /* ─── BENEFITS ─── */
+    .benefits {
+      background: var(--bege);
+      padding: 120px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .benefits__bg-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: var(--serif);
+      font-size: clamp(120px, 20vw, 280px);
+      font-weight: 800;
+      color: rgba(90,56,37,0.05);
+      white-space: nowrap;
+      pointer-events: none;
+      letter-spacing: -0.04em;
+      z-index: 0;
+    }
+    .benefits__inner { position: relative; z-index: 1; }
+    .benefits__header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+    .benefits__header .section-eyebrow { justify-content: center; }
+    .benefits__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--bege);
+    }
+    .benefit-card {
+      background: var(--bege);
+      padding: 48px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: background 0.3s ease;
+    }
+    .benefit-card:hover { background: var(--branco); }
+    .benefit-card__num {
+      font-family: var(--serif);
+      font-size: 64px;
+      font-weight: 800;
+      color: var(--cafe);
+      line-height: 1;
+      opacity: 0.35;
+    }
+    .benefit-card__title {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--preto);
+      line-height: 1.3;
+    }
+    .benefit-card__text {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--cinza);
+    }
+
+    /* ─── AUTHORITY ─── */
+    .authority {
+      padding: 120px 0;
+      background: var(--preto);
+      position: relative;
+      overflow: hidden;
+    }
+    .authority::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(135deg, transparent, rgba(90,56,37,0.08));
+    }
+    .authority__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .authority__visual { position: relative; }
+    .authority__photo-wrap {
+      position: relative;
+      max-width: 460px;
+    }
+    .authority__photo-frame {
+      width: 100%;
+      aspect-ratio: 4/5;
+      border-radius: 16px;
+      background: linear-gradient(145deg, #2D1A0A, #3D2210);
+      overflow: hidden;
+      position: relative;
+    }
+    /* Placeholder para foto */
+    .authority__photo-frame::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(145deg, rgba(90,56,37,0.3), rgba(30,15,5,0.8)),
+        repeating-linear-gradient(45deg, transparent, transparent 30px, rgba(90,56,37,0.03) 30px, rgba(90,56,37,0.03) 31px);
+    }
+    .authority__photo-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: rgba(244,232,216,0.5);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-align: center;
+      padding: 40px;
+    }
+    .authority__photo-placeholder-icon { font-size: 48px; opacity: 0.4; }
+    .authority__photo-deco {
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      width: 100px;
+      height: 100px;
+      border: 1px solid rgba(165,42,42,0.3);
+      border-radius: 50%;
+    }
+    .authority__photo-deco-2 {
+      position: absolute;
+      bottom: 30px;
+      right: -30px;
+      width: 60px;
+      height: 60px;
+      background: var(--vinho);
+      border-radius: 50%;
+      opacity: 0.2;
+    }
+    .authority__years {
+      position: absolute;
+      bottom: -20px;
+      left: 30px;
+      background: var(--vinho);
+      color: var(--branco);
+      padding: 20px 28px;
+      border-radius: 12px;
+    }
+    .authority__years-num {
+      font-family: var(--serif);
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .authority__years-text {
+      font-size: 12px;
+      font-weight: 400;
+      opacity: 0.8;
+      letter-spacing: 0.05em;
+      margin-top: 2px;
+    }
+
+    .authority__content { display: flex; flex-direction: column; gap: 28px; }
+    .authority__content .section-eyebrow-text { color: rgba(244,232,216,0.5); }
+    .authority__title {
+      font-family: var(--serif);
+      font-size: clamp(32px, 3.5vw, 48px);
+      font-weight: 700;
+      color: var(--branco);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+    .authority__title em {
+      font-style: italic;
+      color: #D4956A;
+    }
+    .authority__text {
+      font-size: 16px;
+      line-height: 1.8;
+      color: rgba(244,232,216,0.65);
+      font-weight: 300;
+    }
+    .authority__signature {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-style: italic;
+      color: #D4956A;
+      margin-top: 8px;
+    }
+
+    /* ─── OFERTA ─── */
+    .offer {
+      background: linear-gradient(135deg, #3D0A0A 0%, #5C1010 40%, #3D0A0A 100%);
+      padding: 120px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .offer::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 70% at 50% 50%, rgba(165,42,42,0.1) 0%, transparent 70%);
+    }
+    .offer__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .offer__content { display: flex; flex-direction: column; gap: 32px; }
+    .offer__eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .offer__eyebrow-text {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(244,232,216,0.45);
+    }
+    .offer__title {
+      font-family: var(--serif);
+      font-size: clamp(36px, 4.5vw, 60px);
+      font-weight: 800;
+      color: var(--branco);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .offer__items {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .offer__item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+    }
+    .offer__item-name {
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(244,232,216,0.8);
+    }
+    .offer__item-price {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+      color: rgba(244,232,216,0.6);
+      text-decoration: line-through;
+    }
+    .offer__plus {
+      text-align: center;
+      font-family: var(--serif);
+      font-size: 32px;
+      color: rgba(244,232,216,0.2);
+    }
+    .offer__combo {
+      padding: 28px 32px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 16px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .offer__combo::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.05), transparent);
+    }
+    .offer__combo-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(244,232,216,0.5);
+      margin-bottom: 8px;
+    }
+    .offer__combo-price {
+      font-family: var(--serif);
+      font-size: clamp(56px, 7vw, 88px);
+      font-weight: 800;
+      color: var(--branco);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+    .offer__combo-price sup {
+      font-size: 0.35em;
+      vertical-align: top;
+      margin-top: 18px;
+      display: inline-block;
+      font-weight: 400;
+    }
+    .offer__combo-savings {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #D4956A;
+      font-weight: 500;
+    }
+
+    .offer__visual {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+    .offer__books-stack {
+      position: relative;
+      width: 320px;
+      height: 400px;
+      margin: 0 auto;
+    }
+    .offer__book {
+      position: absolute;
+      width: 220px;
+    }
+    .offer__book--1 {
+      top: 0; left: 0;
+      transform: rotate(-6deg);
+      filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
+    }
+    .offer__book--2 {
+      bottom: 0; right: 0;
+      transform: rotate(4deg);
+      filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
+    }
+    .offer__cta-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+    }
+    .btn-cta-grande {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #F4E8D8, #E8D5BA);
+      color: var(--vinho-escuro);
+      font-family: var(--sans);
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 22px 44px;
+      border-radius: 100px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.35s ease;
+      width: 100%;
+      max-width: 400px;
+    }
+    .btn-cta-grande:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+      background: var(--branco);
+    }
+    .offer__guarantee {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: rgba(244,232,216,0.4);
+    }
+
+    /* ─── DEPOIMENTOS ─── */
+    .testimonials {
+      padding: 120px 0;
+      background: var(--branco);
+    }
+    .testimonials__header {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+    .testimonials__header .section-eyebrow { justify-content: center; }
+    .testimonials__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .testimonial-card {
+      background: var(--branco);
+      border: 1px solid var(--bege-medio);
+      border-radius: 20px;
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonial-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--vinho), var(--cafe));
+      opacity: 0;
+      transition: opacity 0.35s;
+    }
+    .testimonial-card:hover {
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+      transform: translateY(-4px);
+      border-color: transparent;
+    }
+    .testimonial-card:hover::before { opacity: 1; }
+    .testimonial-card__quote {
+      font-family: var(--serif);
+      font-size: 48px;
+      color: var(--bege-medio);
+      line-height: 1;
+    }
+    .testimonial-card__text {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--cinza);
+      font-style: italic;
+      font-family: var(--serif);
+      flex: 1;
+    }
+    .testimonial-card__author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-top: 20px;
+      border-top: 1px solid var(--bege-medio);
+    }
+    .testimonial-card__avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--bege);
+      overflow: hidden;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+    .testimonial-card__name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--preto);
+    }
+    .testimonial-card__role {
+      font-size: 12px;
+      color: var(--cinza);
+      margin-top: 2px;
+    }
+
+    /* ─── FAQ ─── */
+    .faq {
+      padding: 120px 0;
+      background: var(--bege);
+    }
+    .faq__inner {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .faq__sidebar { position: static; }
+    .faq__sidebar .section-title { margin-top: 16px; }
+    .faq__sidebar-text {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--cinza);
+      font-weight: 300;
+      margin-top: 20px;
+    }
+    .faq__list { display: flex; flex-direction: column; gap: 2px; }
+    .faq-item {
+      background: var(--branco);
+      border-radius: 0;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+    .faq-item:first-child { border-radius: 16px 16px 0 0; }
+    .faq-item:last-child { border-radius: 0 0 16px 16px; }
+    .faq-item__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 24px 28px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .faq-item__header:hover { background: #F8F4F0; }
+    .faq-item__q {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--preto);
+    }
+    .faq-item__icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--bege);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--cafe);
+      transition: all 0.3s ease;
+    }
+    .faq-item.open .faq-item__icon {
+      background: var(--vinho);
+      color: var(--branco);
+      transform: rotate(45deg);
+    }
+    .faq-item__body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .faq-item.open .faq-item__body { max-height: 300px; }
+    .faq-item__a {
+      padding: 0 28px 24px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--cinza);
+    }
+
+    /* ─── CTA FINAL ─── */
+    .cta-final {
+      padding: 120px 0;
+      background: linear-gradient(135deg, #1A0A05, #2D1408, #1A0A05);
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-final::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(165,42,42,0.08) 0%, transparent 70%);
+    }
+    .cta-final__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-final__content { display: flex; flex-direction: column; gap: 28px; }
+    .cta-final__label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(244,232,216,0.4);
+    }
+    .cta-final__title {
+      font-family: var(--serif);
+      font-size: clamp(44px, 6vw, 80px);
+      font-weight: 800;
+      color: var(--branco);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+    .cta-final__title em {
+      font-style: italic;
+      color: #D4956A;
+    }
+    .cta-final__sub {
+      font-size: 17px;
+      line-height: 1.7;
+      color: rgba(244,232,216,0.6);
+      font-weight: 300;
+      max-width: 480px;
+    }
+    .cta-final__price {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .cta-final__price-from {
+      font-size: 14px;
+      color: rgba(244,232,216,0.35);
+      text-decoration: line-through;
+    }
+    .cta-final__price-val {
+      font-family: var(--serif);
+      font-size: clamp(48px, 5vw, 64px);
+      font-weight: 800;
+      color: var(--branco);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .cta-final__actions { display: flex; flex-direction: column; gap: 14px; }
+    .cta-final__trust {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: rgba(244,232,216,0.4);
+    }
+    .cta-final__visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cta-final__books {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+    }
+    .cta-final__book {
+      position: absolute;
+    }
+    .cta-final__book--1 {
+      width: 55%;
+      left: 0; top: 0;
+      transform: rotate(-8deg);
+      filter: drop-shadow(0 30px 60px rgba(0,0,0,0.5));
+    }
+    .cta-final__book--2 {
+      width: 55%;
+      right: 0; bottom: 0;
+      transform: rotate(6deg);
+      filter: drop-shadow(0 30px 60px rgba(0,0,0,0.5));
+    }
+    .cta-final__books-inner {
+      width: 100%;
+      padding-bottom: 100%;
+      position: relative;
+    }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      padding: 40px 0;
+      background: var(--bege);
+      text-align: center;
+    }
+    .footer__logo {
+      margin-bottom: 16px;
+    }
+    .footer__logo img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
+    .footer__text {
+      font-size: 13px;
+      color: var(--cinza);
+      line-height: 1.6;
+    }
+
+    /* ─── SCROLL ANIMATIONS ─── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-up-delay-1 { transition-delay: 0.1s; }
+    .fade-up-delay-2 { transition-delay: 0.2s; }
+    .fade-up-delay-3 { transition-delay: 0.3s; }
+    .fade-up-delay-4 { transition-delay: 0.4s; }
+
+    /* ─── RESPONSIVIDADE ─── */
+    @media (max-width: 1024px) {
+      .hero__inner { gap: 40px; padding: 100px 0 80px; }
+      .hero__book { width: 210px; }
+      .ebook-block { gap: 50px; }
+      .offer__inner { gap: 50px; }
+      .authority__inner { gap: 50px; }
+      .cta-final__inner { gap: 50px; }
+    }
+
+    @media (max-width: 768px) {
+      body { text-align: center; }
+      .ebook-list { align-items: center; }
+      .btn-primary { max-width: 100%; }
+      .hero__inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 100px 0 60px;
+        gap: 12px;
+      }
+      .hero__eyebrow { justify-content: center; }
+      .hero__subtitle { max-width: 100%; }
+      .hero__actions { align-items: center; }
+      .hero__trust { justify-content: center; }
+      .hero__books { height: 360px; margin-top: -16px; }
+      .hero__book { width: 180px; }
+      .hero__book--1 { transform: perspective(800px) rotateY(-6deg) translateX(-60px) translateY(-15px); }
+      .hero__book--2 { transform: perspective(800px) rotateY(4deg) translateX(60px) translateY(20px); }
+
+      .proof-strip__inner { gap: 24px; }
+      .proof-sep { display: none; }
+
+      .ebook-block,
+      .ebook-block--reverse .ebook-block__visual,
+      .ebook-block--reverse .ebook-block__content {
+        grid-template-columns: 1fr;
+        order: unset;
+      }
+      .ebook-block { display: flex; flex-direction: column; gap: 40px; }
+      .ebook-block--reverse { flex-direction: column; }
+      .ebook-block__visual { order: -1 !important; }
+      .ebook-block__book-wrap { max-width: 260px; }
+
+      .benefits__grid { grid-template-columns: 1fr; }
+      .benefit-card { padding: 36px 28px; }
+
+      .authority__inner { grid-template-columns: 1fr; gap: 48px; }
+      .authority__photo-wrap { max-width: 320px; margin: 0 auto; }
+      .authority__photo-frame { background: var(--preto); }
+      .authority__photo-frame::before { background: none; }
+      .authority::before { display: none; }
+      .authority__photo-deco,
+      .authority__photo-deco-2 { display: none; }
+      .authority__years { display: none; }
+
+      .offer__inner { grid-template-columns: 1fr; gap: 48px; }
+      .offer__books-stack { width: 260px; height: 320px; }
+      .offer__book { width: 180px; }
+
+      .testimonials__grid { grid-template-columns: 1fr; }
+
+      .faq__inner { grid-template-columns: 1fr; gap: 40px; }
+      .faq__sidebar { position: static; }
+
+      .cta-final__inner { grid-template-columns: 1fr; gap: 48px; }
+      .cta-final__visual { display: none; }
+
+      .section-title { font-size: clamp(28px, 7vw, 42px); }
+    }
+
+    @media (max-width: 480px) {
+      .hero__title { font-size: clamp(32px, 8vw, 44px); }
+      .hero__price-value { font-size: clamp(44px, 12vw, 60px); }
+      .btn-primary { font-size: 14px; padding: 18px 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="hero" id="inicio">
+    <div class="hero__grain"></div>
+    <a href="#" class="hero__logo-link">
+      <img src="images/logo.png" alt="Darlete Honorato" class="hero__logo-img" />
+    </a>
+    <div class="container">
+      <div class="hero__inner">
+
+        <div class="hero__content">
+
+          <h1 class="hero__title">
+            Receitas Que<br>
+            <em>Encantam à Mesa</em><br>
+          </h1>
+
+          <p class="hero__subtitle">
+            Descubra receitas caseiras cuidadosamente selecionadas para facilitar
+            seu dia a dia e transformar sua cozinha em uma verdadeira fonte de sabor.
+          </p>
+
+          <div class="hero__price-block">
+            <span class="hero__price-from">De R$ 59,80</span>
+            <span class="hero__price-label">Por apenas</span>
+            <div class="hero__price-value"><span>R$</span> 41,86</div>
+          </div>
+
+          <div class="hero__actions">
+            <a href="#oferta" class="btn-primary">
+              Quero Garantir o Combo →
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__books">
+          <div class="hero__book hero__book--1">
+            <img src="images/1.png" alt="E-book Bolos Caseiros" style="width:100%;border-radius:8px;" />
+          </div>
+
+          <div class="hero__book hero__book--2">
+            <img src="images/2.png" alt="E-book Receitas Salgadas" style="width:100%;border-radius:8px;" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SOCIAL PROOF STRIP
+  ═══════════════════════════════════════════ -->
+  <div class="proof-strip">
+    <div class="container">
+      <div class="proof-strip__inner">
+        <div class="proof-item">
+          <span class="proof-item__text">Acesso Imediato</span>
+        </div>
+        <div class="proof-sep"></div>
+        <div class="proof-item">
+          <span class="proof-item__text">Celular, Tablet e PC</span>
+        </div>
+        <div class="proof-sep"></div>
+        <div class="proof-item">
+          <span class="proof-item__text">Compra 100% Segura</span>
+        </div>
+        <div class="proof-sep"></div>
+        <div class="proof-item">
+          <span class="proof-item__text">+100 Receitas Selecionadas</span>
+        </div>
+        <div class="proof-sep"></div>
+        <div class="proof-item">
+          <span class="proof-item__text">Ideal para Gerar Renda</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       APRESENTAÇÃO DOS E-BOOKS
+  ═══════════════════════════════════════════ -->
+  <section class="ebooks" id="ebooks">
+    <div class="container">
+
+      <!-- Bloco 1 — Bolos -->
+      <div class="ebook-block fade-up">
+        <div class="ebook-block__visual">
+          <div class="ebook-block__book-wrap">
+            <img class="ebook-block__book-img" src="images/1.png" alt="E-book Bolos Caseiros" />
+            <div class="ebook-block__price-tag">
+              <small>apenas</small>
+              R$ 29,90
+            </div>
+          </div>
+        </div>
+
+        <div class="ebook-block__content">
+          <div class="ebook-block__number">01</div>
+          <h2 class="ebook-block__title">Melhores Receitas<br>de Bolos Caseiros</h2>
+          <p class="ebook-block__desc">
+            Uma coleção cuidadosamente reunida das melhores receitas de bolos caseiros,
+            com massas fofas, coberturas irresistíveis e passo a passo detalhado
+            para você reproduzir com facilidade em casa.
+          </p>
+          <ul class="ebook-list">
+            <li>Massas fofinhas e muito saborosas</li>
+            <li>Coberturas irresistíveis</li>
+            <li>Receitas tradicionais e afetivas</li>
+            <li>Receitas especiais para vender</li>
+            <li>Passo a passo detalhado</li>
+            <li>Ingredientes acessíveis</li>
+          </ul>
+          <a href="#oferta" class="btn-primary" style="margin-top:8px;">Adquirir Agora →</a>
+        </div>
+      </div>
+
+      <!-- Bloco 2 — Salgados -->
+      <div class="ebook-block ebook-block--reverse fade-up">
+        <div class="ebook-block__visual">
+          <div class="ebook-block__book-wrap">
+            <!-- SUBSTITUA pelo <img> real quando tiver a capa -->
+            <img class="ebook-block__book-img" src="images/2.png" alt="E-book Receitas Salgadas" />
+            <div class="ebook-block__price-tag">
+              <small>apenas</small>
+              R$ 29,90
+            </div>
+          </div>
+        </div>
+
+        <div class="ebook-block__content">
+          <div class="ebook-block__number">02</div>
+          <h2 class="ebook-block__title">Melhores Receitas<br>Salgadas</h2>
+          <p class="ebook-block__desc">
+            Tortas, salgados assados, opções práticas para o dia a dia e receitas
+            que podem se transformar em uma fonte real de renda extra. Tudo com
+            muito sabor e praticidade.
+          </p>
+          <ul class="ebook-list">
+            <li>Tortas irresistíveis</li>
+            <li>Salgados assados e fritos</li>
+            <li>Receitas práticas e rápidas</li>
+            <li>Lanches para o dia a dia</li>
+            <li>Opções para gerar renda extra</li>
+            <li>Ingredientes simples e baratos</li>
+          </ul>
+          <a href="#oferta" class="btn-primary" style="margin-top:8px;">Adquirir Agora →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       BENEFÍCIOS
+  ═══════════════════════════════════════════ -->
+  <section class="benefits">
+    <div class="benefits__bg-text">Receitas</div>
+    <div class="container benefits__inner">
+      <div class="benefits__header fade-up">
+        <h2 class="section-title">O que você <em>recebe</em></h2>
+      </div>
+      <div class="benefits__grid fade-up">
+        <div class="benefit-card">
+          <div class="benefit-card__num">10+</div>
+          <div class="benefit-card__title">Receitas Selecionadas</div>
+          <p class="benefit-card__text">Cada e-book contém 10 receitas cuidadosamente selecionadas, testadas e aprovadas por Darlete Honorato.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__num">→</div>
+          <div class="benefit-card__title">Passo a Passo Detalhado</div>
+          <p class="benefit-card__text">Instruções claras e precisas em cada receita, pensadas para facilitar o preparo para todos os níveis.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__num">✓</div>
+          <div class="benefit-card__title">Acesso Imediato</div>
+          <p class="benefit-card__text">Após a compra você recebe o acesso na hora. Sem espera, sem complicação.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__num">▣</div>
+          <div class="benefit-card__title">Qualquer Dispositivo</div>
+          <p class="benefit-card__text">Acesse pelo celular, tablet ou computador, onde e quando quiser, no seu ritmo.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__num">♥</div>
+          <div class="benefit-card__title">Feito com Carinho</div>
+          <p class="benefit-card__text">Receitas reunidas com afeto, tradição e experiência. Cada detalhe pensado para você.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       AUTORIDADE — DARLETE
+  ═══════════════════════════════════════════ -->
+  <section class="authority" id="sobre">
+    <div class="container">
+      <div class="authority__inner">
+
+        <div class="authority__visual fade-up">
+          <div class="authority__photo-wrap">
+            <div class="authority__photo-deco"></div>
+            <div class="authority__photo-frame">
+              <img src="images/darlete.jpeg" alt="Darlete Honorato" style="width:100%;height:100%;object-fit:cover;" />
+            </div>
+            <div class="authority__photo-deco-2"></div>
+            <div class="authority__years">
+              <div class="authority__years-num">+30</div>
+              <div class="authority__years-text">anos de cozinha</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="authority__content fade-up fade-up-delay-2">
+          <h2 class="authority__title">
+            Receitas Criadas Com<br>
+            <em>Carinho e Experiência</em>
+          </h2>
+          <p class="authority__text">
+            Olá, meus amores!<br>
+Sou Darlete Honorato, nascida em Imperatriz, Maranhão, esposa, mãe de dois filhos e apaixonada pela vida simples. Muitas pessoas me acompanham pela rotina no sítio, pelas receitas e pelos momentos que compartilho no dia a dia.
+          </p>
+          <p class="authority__text">
+            Embora eu não tenha nascido na roça, foi vivendo no sítio que aprendi muitas das habilidades e conhecimentos que carrego comigo hoje. A culinária sempre esteve presente nessa caminhada, e cozinhar para a família é uma das minhas maiores paixões.
+          </p>
+          <p class="authority__text">
+           Este e-book reúne receitas selecionadas com muito carinho, inspiradas na minha história e em tudo o que aprendi ao longo dos anos. Espero que ele seja útil, inspirador e leve muito sabor para a sua casa.
+<br>
+Com amor,
+          </p>
+          <div class="authority__signature">Darlete Honorato</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       OFERTA
+  ═══════════════════════════════════════════ -->
+  <section class="offer" id="oferta">
+    <div class="container">
+      <div class="offer__inner">
+
+        <div class="offer__content fade-up">
+          <h2 class="offer__title">Leve os<br>dois e-books</h2>
+
+          <div class="offer__items">
+            <div class="offer__item">
+              <span class="offer__item-name">Receitas de Bolos Caseiros</span>
+              <span class="offer__item-price">R$ 29,90</span>
+            </div>
+            <div class="offer__plus">+</div>
+            <div class="offer__item">
+              <span class="offer__item-name">Receitas Salgadas</span>
+              <span class="offer__item-price">R$ 29,90</span>
+            </div>
+          </div>
+
+          <div class="offer__combo">
+            <div class="offer__combo-label">Combo Especial</div>
+            <div class="offer__combo-price"><sup>R$</sup>41,86</div>
+            <div class="offer__combo-savings">Você economiza R$ 17,94</div>
+          </div>
+        </div>
+
+        <div class="offer__visual fade-up fade-up-delay-2">
+          <div class="offer__books-stack">
+            <div class="offer__book offer__book--1">
+              <img src="images/1.png" alt="E-book Bolos Caseiros" style="width:100%;border-radius:8px;" />
+            </div>
+            <div class="offer__book offer__book--2">
+              <img src="images/2.png" alt="E-book Receitas Salgadas" style="width:100%;border-radius:8px;" />
+            </div>
+          </div>
+
+          <div class="offer__cta-block">
+            <a href="#" class="btn-cta-grande">
+              🔥 Garantir Acesso Agora
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       DEPOIMENTOS
+  ═══════════════════════════════════════════ -->
+  <section class="testimonials" id="depoimentos">
+    <div class="container">
+      <div class="testimonials__header fade-up">
+        <h2 class="section-title" style="margin-top:12px">O que dizem<br><em>sobre as receitas</em></h2>
+      </div>
+
+      <div class="testimonials__grid fade-up">
+        <div class="testimonial-card">
+          <div class="testimonial-card__quote">"</div>
+          <p class="testimonial-card__text">
+            Fiz o bolo de chocolate na primeira tentativa e ficou incrível! As instruções são
+            muito claras e os ingredientes são simples. Minha família adorou.
+          </p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">👩</div>
+            <div>
+              <div class="testimonial-card__name">Ana Paula S.</div>
+              <div class="testimonial-card__role">Mãe de família, São Paulo</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-card__quote">"</div>
+          <p class="testimonial-card__text">
+            Comecei a vender salgados com as receitas do e-book e já recuperei o valor investido
+            em um final de semana. Recomendo muito!
+          </p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">👩‍🍳</div>
+            <div>
+              <div class="testimonial-card__name">Fernanda Lima</div>
+              <div class="testimonial-card__role">Empreendedora, Minas Gerais</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-card__quote">"</div>
+          <p class="testimonial-card__text">
+            Nunca fui muito boa na cozinha, mas com essas receitas parece que tudo deu certo.
+            O passo a passo é perfeito para iniciantes como eu.
+          </p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">🙋‍♀️</div>
+            <div>
+              <div class="testimonial-card__name">Carla Mendes</div>
+              <div class="testimonial-card__role">Professora, Rio de Janeiro</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FAQ
+  ═══════════════════════════════════════════ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="faq__inner">
+
+        <div class="faq__sidebar fade-up">
+          <h2 class="section-title">Perguntas<br><em>frequentes</em></h2>
+          <p class="faq__sidebar-text">
+            Se você ainda tem dúvidas, veja as respostas abaixo. E se precisar de mais ajuda,
+            é só falar com a gente.
+          </p>
+          <a href="#" class="btn-primary" style="margin-top:24px;">Falar com Suporte →</a>
+        </div>
+
+        <div class="faq__list fade-up fade-up-delay-2">
+
+          <div class="faq-item">
+            <div class="faq-item__header" onclick="toggleFaq(this)">
+              <span class="faq-item__q">Como recebo os e-books?</span>
+              <span class="faq-item__icon">+</span>
+            </div>
+            <div class="faq-item__body">
+              <p class="faq-item__a">
+                Após a confirmação do pagamento, você recebe um e-mail com o link de acesso aos
+                e-books. O processo é automático e acontece em minutos.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-item__header" onclick="toggleFaq(this)">
+              <span class="faq-item__q">O acesso é realmente imediato?</span>
+              <span class="faq-item__icon">+</span>
+            </div>
+            <div class="faq-item__body">
+              <p class="faq-item__a">
+                Sim! Assim que o pagamento for aprovado, você recebe o acesso na hora.
+                Para pagamentos via boleto, o prazo é de até 1 dia útil para compensação.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-item__header" onclick="toggleFaq(this)">
+              <span class="faq-item__q">Posso acessar pelo celular?</span>
+              <span class="faq-item__icon">+</span>
+            </div>
+            <div class="faq-item__body">
+              <p class="faq-item__a">
+                Com certeza! Os e-books funcionam em qualquer dispositivo: celular, tablet
+                ou computador. Você leva suas receitas para onde quiser.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-item__header" onclick="toggleFaq(this)">
+              <span class="faq-item__q">O pagamento é seguro?</span>
+              <span class="faq-item__icon">+</span>
+            </div>
+            <div class="faq-item__body">
+              <p class="faq-item__a">
+                Sim, totalmente seguro. Trabalhamos com plataformas de pagamento certificadas
+                que protegem seus dados com criptografia. Você pode comprar com total tranquilidade.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-item__header" onclick="toggleFaq(this)">
+              <span class="faq-item__q">Posso usar as receitas para vender?</span>
+              <span class="faq-item__icon">+</span>
+            </div>
+            <div class="faq-item__body">
+              <p class="faq-item__a">
+                As receitas são para uso pessoal e para que você prepare em casa ou para venda
+                dos produtos feitos por você. A revenda dos e-books em si não está incluída.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CTA FINAL
+  ═══════════════════════════════════════════ -->
+  <section class="cta-final">
+    <div class="container">
+      <div class="cta-final__inner">
+
+        <div class="cta-final__content fade-up">
+          <h2 class="cta-final__title">
+            Comece<br><em>Hoje Mesmo</em>
+          </h2>
+          <p class="cta-final__sub">
+            Tenha acesso imediato aos dois e-books e descubra receitas que unem
+            sabor, praticidade e oportunidade.
+          </p>
+          <div class="cta-final__price">
+            <span class="cta-final__price-from">De R$ 59,80</span>
+            <div class="cta-final__price-val">R$ 41,86</div>
+          </div>
+          <div class="cta-final__actions">
+            <a href="#" class="btn-primary" style="max-width:100%;font-size:16px;padding:22px 44px;">
+              Quero Meus E-books →
+            </a>
+          </div>
+        </div>
+
+        <div class="cta-final__visual">
+          <div class="cta-final__books">
+            <div class="cta-final__books-inner">
+              <div class="cta-final__book cta-final__book--1">
+                <img src="images/1.png" alt="E-book Bolos Caseiros" style="width:100%;border-radius:8px;" />
+              </div>
+              <div class="cta-final__book cta-final__book--2">
+                <img src="images/2.png" alt="E-book Receitas Salgadas" style="width:100%;border-radius:8px;" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__logo">
+        <img src="images/logo2.png" alt="Darlete Honorato" />
+      </div>
+      <p class="footer__text">
+        © 2026 Darlete Honorato. Todos os direitos reservados.<br>
+        Site desenvolvido por BrandCode Solutions.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       JAVASCRIPT
+  ═══════════════════════════════════════════ -->
+  <script>
+
+    // FAQ accordion
+    function toggleFaq(header) {
+      const item = header.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Parallax sutil no hero
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const heroBooks = document.querySelector('.hero__books');
+      if (heroBooks && scrollY < window.innerHeight) {
+        heroBooks.style.transform = `translateY(${scrollY * 0.08}px)`;
+      }
+    });
+  </script>
+
+</body>
+</html>
