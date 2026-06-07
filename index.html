@@ -1298,7 +1298,7 @@
           </div>
 
           <div class="hero__actions">
-            <a href="#oferta" class="btn-primary">
+            <a href="https://pay.hotmart.com/G106177999F" target="_blank" rel="noopener" class="btn-primary">
               Quero Garantir o Combo →
             </a>
           </div>
@@ -1329,7 +1329,7 @@
         </div>
         <div class="proof-sep"></div>
         <div class="proof-item">
-          <span class="proof-item__text">Celular, Tablet e PC</span>
+          <span class="proof-item__text">Celular, Tablet e Computador</span>
         </div>
         <div class="proof-sep"></div>
         <div class="proof-item">
@@ -1381,7 +1381,7 @@
             <li>Passo a passo detalhado</li>
             <li>Ingredientes acessíveis</li>
           </ul>
-          <a href="#oferta" class="btn-primary" style="margin-top:8px;">Adquirir Agora →</a>
+          <a href="https://pay.hotmart.com/R106175190H" target="_blank" rel="noopener" class="btn-primary" style="margin-top:8px;">Adquirir Agora →</a>
         </div>
       </div>
 
@@ -1414,7 +1414,7 @@
             <li>Opções para gerar renda extra</li>
             <li>Ingredientes simples e baratos</li>
           </ul>
-          <a href="#oferta" class="btn-primary" style="margin-top:8px;">Adquirir Agora →</a>
+          <a href="https://pay.hotmart.com/P106177729D?bid=1780803240175" target="_blank" rel="noopener" class="btn-primary" style="margin-top:8px;">Adquirir Agora →</a>
         </div>
       </div>
 
@@ -1545,7 +1545,7 @@ Com amor,
           </div>
 
           <div class="offer__cta-block">
-            <a href="#" class="btn-cta-grande">
+            <a href="https://pay.hotmart.com/G106177999F" target="_blank" rel="noopener" class="btn-cta-grande">
               🔥 Garantir Acesso Agora
             </a>
           </div>
@@ -1712,7 +1712,7 @@ Com amor,
             <div class="cta-final__price-val">R$ 24,99</div>
           </div>
           <div class="cta-final__actions">
-            <a href="#" class="btn-primary" style="max-width:100%;font-size:16px;padding:22px 44px;">
+            <a href="https://pay.hotmart.com/G106177999F" target="_blank" rel="noopener" class="btn-primary" style="max-width:100%;font-size:16px;padding:22px 44px;">
               Quero Meus E-books →
             </a>
           </div>
@@ -1746,7 +1746,7 @@ Com amor,
       </p>
       <p class="footer__text">
         © 2026 Darlete Honorato. Todos os direitos reservados.<br>
-        Site desenvolvido por BrandCode Solutions.
+        Site desenvolvido por <a href="https://www.instagram.com/brandcodesolutions" target="_blank" rel="noopener" style="text-decoration:none;font-weight:700;color:inherit;">BrandCode Solutions</a>.
       </p>
     </div>
   </footer>
@@ -1782,6 +1782,51 @@ Com amor,
       if (heroBooks && scrollY < window.innerHeight) {
         heroBooks.style.transform = `translateY(${scrollY * 0.08}px)`;
       }
+    });
+  </script>
+
+  <!-- BOTÃO VOLTAR AO TOPO -->
+  <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Voltar ao topo">
+    ↑
+  </button>
+
+  <style>
+    #back-to-top {
+      position: fixed;
+      bottom: 32px;
+      right: 12px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--vinho);
+      color: var(--branco);
+      font-size: 20px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(165,42,42,0.35);
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #back-to-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #back-to-top:hover {
+      background: var(--vinho-escuro);
+      box-shadow: 0 8px 30px rgba(165,42,42,0.5);
+      transform: translateY(-3px);
+    }
+  </style>
+
+  <script>
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 400);
     });
   </script>
 
